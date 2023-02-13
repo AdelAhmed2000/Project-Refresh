@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #c054ff;
+  --main-transition: all 0.5s;
+  --margin-top: 90px;
+}
+body {
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+}
+/* Start NavBar */
+.navbar {
+  /* position: fixed;
+  left: 0;
+  right: 0; */
+  /* min-height: 130px; */
+  background-color: #241c1c94;
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+  transition: all 0.5;
+  font-size: 20px;
+  font-weight: bold;
+}
+.search {
+  color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: #fec868;
+}
+.navbar .navbar-brand span {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 16px;
+}
+.navbar .navbar-brand img {
+  max-width: 22%;
+}
+.navbar .navbar-toggler {
+  color: #fff;
+  font-size: 25px;
+  border-color: #fff;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: #767676;
+}
+/* End NavBar */
+/* Start landing */
+.landing {
+  background-image: linear-gradient(0deg, #9775fa 5%, #86b7fe 95%);
+  /* background-image: url(../images/landing-2.jpg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+.landing::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.562);
+  z-index: -1;
+}
+.landing h1 {
+  font-size: 50px;
+}
+.landing .text-center span {
+  font-family: cursive;
+}
+/* End landing */
+/* Start Home */
+.home {
+  margin-top: var(--margin-top);
+}
+.home .fet {
+  padding: 20px 0px;
+  background-color: white;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  overflow: hidden;
+}
+.home .fet .text {
+  transition: var(--main-transition);
+}
+.home .fet .text h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.home .fet .text p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.home .fet:hover .text {
+  color: #fff;
+}
+.home .fet .icon {
+  transition: var(--main-transition);
+}
+.home .fet:hover .icon img {
+  box-shadow: 0 0 0 350px #86b7fe;
+}
+.home .fet .icon img {
+  width: 20%;
+  background-color: #86b7fe;
+  padding: 10px 10px;
+  border-radius: 50%;
+  transition: 1s;
+}
+/* @media screen and (min-width:600px) {
+.home .box {
+  width: 50%;
+}
+} */
+/* End Home */
+/* Start Services  */
+.services {
+  background-color: #86b7fe0a;
+  margin-top: var(--margin-top);
+  padding-bottom: 90px;
+  padding-top: 90px;
+}
+.services .row .textCenter h4 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 70px;
+  color: #777;
+}
+.services .card {
+  border: none;
+  text-align: center;
+  margin: 10px;
+  box-shadow: rgb(0 0 0 / 8%) 0px 1px 3px;
+  overflow: hidden;
+}
+.services .card .imges {
+  position: relative;
+  transition: var(--main-transition);
+}
+.services .card .imges .over {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #0000007d;
+  inset: 0;
+  opacity: 0;
+  border-radius: 6px;
+  transition: var(--main-transition);
+}
+.services .card .imges:hover .over {
+  opacity: 1;
+}
+/* .services .card .imges:hover {
+  transform: scale(1.1);
+} */
+.services .card .card-body h5 {
+  margin: 20px 0;
+  font-size: 26px;
+}
+.services .card .card-body p {
+  color: #777;
+}
+/* End Services  */
+/* Start sections */
+.section {
+  margin-top: var(--margin-top);
+  padding-bottom: 90px;
+  padding-top: 90px;
+}
+.section .row .card {
+  background-color: #eee;
+  border: none;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  transition: var(--main-transition);
+}
+.section .row .card:hover {
+  background-color: #86b7fe;
+  box-shadow: rgb(0 0 0 / 25%) 7px 6px 10px;
+}
+.section .row .card:hover .card-body {
+  color: #fff;
+}
+.section .row .card .image {
+  position: relative;
+  bottom: 80px;
+  display: flex;
+  justify-content: center;
+}
+.section .row .card img {
+  width: 40%;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: white;
+}
+.section .row .card .card-body {
+  text-align: center;
+  padding: 0 0 28px;
+  transition: var(--main-transition);
+}
+.section .row .card .card-body h5 {
+  font-size: 30px;
+  font-weight: 600;
+}
+.section .row .card .card-body p {
+  font-size: 18px;
+}
+/* End sections */
+/* Start About */
+.about {
+  background-color: hsl(216, 100%, 99%);
+  padding: 100px 0;
+}
+.about .main-title h1 {
+  margin-bottom: 5rem;
+  font-size: 50px;
+}
+.about .row .imge img {
+  width: 100%;
+  margin-top: 40px;
+}
+.about .row .text {
+  margin-right: 20px;
+  margin-top: 40px;
+}
+.about .row .text h1 {
+  font-size: 45px;
+  color: var(--bs-gray-800);
+  margin-bottom: 15px;
+}
+.about .row .text p {
+  line-height: 1.7;
+  font-size: 16px;
+  font-weight: bold;
+  color: #777;
+  margin-bottom: 15px;
+}
+.about .row .text h5 {
+  font-size: 22px;
+  color: var(--bs-gray-800);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+/* End About */
+/* Start contact */
+.contact {
+  padding: 100px 0;
+}
+.contact .main-title h1 {
+  margin-bottom: 5rem;
+  font-size: 50px;
+}
+.contact .row .imge img {
+  width: 90%;
+  margin-top: 50px;
+}
+.contact .row .parent {
+  margin: 50px 0;
+}
+.contact .row .parent .text h3 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.contact .row .parent form .btn {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 30px;
+  margin: 30px 0;
+}
+/* End contact */
+/* Start Footer */
+.foot {
+  padding: 30px 0;
+  margin-top: 45px;
+  background-color: #fafcff;
+}
+.foot .row .parent {
+  text-align: center;
+  padding: 40px;
+}
+.foot .row .parent h1 {
+  margin-bottom: 30px;
+}
+.foot .row .parent ul {
+  list-style: none;
+  margin-top: 40px;
+}
+.foot .row .parent ul li {
+  padding: 10px;
+}
+.foot .row .parent ul li a {
+  text-decoration: none;
+  font-size: 23px;
+}
+.foot .row .parent .text {
+  color: var(--bs-primary-text);
+}
+.foot .row .parent .text p {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+}
+.foot .row .parent .social {
+  margin-top: 30px;
+}
+.foot .row .parent .social a {
+  padding: 4px 16px;
+  font-size: 23px;
+  background-color: darkgray;
+  border-radius: 50%;
+  margin: 0 4px;
+}
+.foot .row .imeg img {
+  width: 100%;
+  padding: 45px;
+}
+/* End Footer */
